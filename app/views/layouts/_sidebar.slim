@@ -1,0 +1,14 @@
+#sidebar-wrapper
+  ul.sidebar-nav
+    - if user_signed_in?
+      li
+        = link_to "Dashboard",root_path
+      li
+        = link_to 'Signout', destroy_user_session_path, :method=>'delete'
+    - else
+      li
+        = link_to 'Signin', new_user_session_path
+      li
+        = link_to "Signup",new_user_registration_path
+      li
+        = link_to "Forgot Password",new_user_password_path

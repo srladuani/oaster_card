@@ -50,3 +50,5 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
 end
+gem 'rails_script', '~> 2.0'
+gem 'jquery-validation-rails'
