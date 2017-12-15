@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Balance:
+  = @card.balance
+p
+  strong User:
+  = @card.user_id
+
+=> link_to 'Edit', edit_card_path(@card)
+'|
+=< link_to 'Back', cards_path

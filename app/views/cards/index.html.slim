@@ -1,0 +1,22 @@
+h1 Listing cards
+
+table
+  thead
+    tr
+      th Balance
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @cards.each do |card|
+      tr
+        td = card.balance
+        td = card.user_id
+        td = link_to 'Show', card
+        td = link_to 'Edit', edit_card_path(card)
+        td = link_to 'Destroy', card, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+= link_to 'New Card', new_card_path unless current_user.card

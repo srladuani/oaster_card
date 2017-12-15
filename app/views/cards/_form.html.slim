@@ -1,0 +1,9 @@
+= simple_form_for(@card,html: {id: 'card_form'}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :balance,input_html: {min: 3.20}
+    = f.input :user_id,as: :hidden
+
+  .form-actions
+    = f.button :submit,value: "#{@card.new_record? ? 'Add Card' : 'Update Card'}"
