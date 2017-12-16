@@ -24,7 +24,7 @@ This application requires:
 - Ruby 2.3.1
 - Rails 5.1.4
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
+Complete Guide for running project code [Installation and Project Setup Guide](https://github.com/srladuani/oaster_card/wiki).
 
 Getting Started
 ---------------
