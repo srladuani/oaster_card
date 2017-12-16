@@ -5,7 +5,6 @@ class Journey < ApplicationRecord
 
 
   def complete!
-    #@end_point = format_words(end_point)
     return true if self.bus?
     # calculate the final fare and refund the remaining paid fare
     final_fare = final_tube_fare
