@@ -1,0 +1,13 @@
+= simple_form_for(@journey,html: {id: "journey_form"}) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :origin,as: :select,collection: Zone::ZONES.keys,include_blank: false,disabled: !@journey.new_record?
+    - unless @journey.new_record?
+      = f.input :destination,as: :select,collection: Zone::ZONES.keys,include_blank: false
+      = f.hidden_field :is_completed,value: true
+    = f.input :via,as: :select,collection: Journey.via.keys,include_blank: false,disabled: !@journey.new_record?
+    = f.input :user_id,as: :hidden
+
+  .form-actions
+    = f.button :submit,value: "#{@journey.new_record? ? 'Start Journey' : 'Complete Journey'}"

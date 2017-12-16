@@ -1,3 +1,9 @@
+#### custom form validators ####
+App.customValidatorMethods = ->
+  jQuery.validator.addMethod "notEqualTo", ((value, element, param) ->
+    @optional(element) or value != $(param).val()
+  ), "Please choose a different value"
+
 #### signin form validations ####
 App.signinFormValidator = ->
   $("#signin_form").validate

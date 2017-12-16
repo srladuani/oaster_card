@@ -1,0 +1,8 @@
+tr id="journey_#{journey.id}"
+  td = journey.origin
+  td
+    - if journey.is_completed
+      = journey.destination
+    - else
+      = link_to "Complete",edit_journey_path(journey),class: "btn btn-success"
+  td = journey.fare

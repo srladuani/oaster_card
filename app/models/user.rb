@@ -3,6 +3,8 @@ class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
 
   has_one :card
+  has_many :journeys
+
 
   def set_default_role
     self.role ||= :user

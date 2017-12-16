@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Origin:
+  = @journey.origin
+p
+  strong Destination:
+  = @journey.destination
+p
+  strong Fare:
+  = @journey.fare
+p
+  strong User:
+  = @journey.user_id
+
+=> link_to 'Edit', edit_journey_path(@journey)
+'|
+=< link_to 'Back', journeys_path

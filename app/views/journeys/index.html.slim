@@ -1,0 +1,16 @@
+h1 Listing journeys
+
+table.table
+  thead
+    tr
+      th Origin
+      th Destination
+      th Fare
+      
+  tbody
+    = render partial: 'journey',collection: @journeys
+      
+        
+br
+
+= link_to 'Start Journey', new_journey_path,class: 'btn btn-default'
